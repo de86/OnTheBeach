@@ -1,0 +1,79 @@
+$color-header-info: rgba(255, 255, 255, 0.75);
+
+.result-panel {
+    position: relative;
+    margin-bottom: 20px;
+    
+    @include box-shadow;
+}
+
+.result-panel__header {
+    position: absolute;
+    width: 100%;
+    
+    @include clearfix;
+}
+
+.result-panel__header,
+.result-panel__hotel-name {
+    margin: 0;
+}
+
+.result-panel__header-info,
+.result-panel__price {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.result-panel__header-info {
+    background-color: $color-header-info;
+    float: left;
+    width: 75%;
+}
+
+.result-panel__hotel-name,
+.result-panel__rating {
+    display: inline-block;
+}
+
+.result-panel__hotel-name
+{
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+
+.result-panel__hotel-name,
+.result-panel__location,
+.result-panel__price{
+    color: $color-font-primary;
+}
+
+.result-panel__location {
+    font-size: .9em;
+    margin: 0;
+}
+
+.result-panel__price-container {
+    right: 10px;
+}
+
+.result-panel__price {
+    background-color: $color-tertiary;
+    font-size: 0.8em;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    width: 24%;
+}
+
+.result-panel__price-text {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.result-panel__thumbnail {
+    display: block;
+    width: 100%;
+}
+

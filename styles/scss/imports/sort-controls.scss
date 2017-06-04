@@ -1,0 +1,36 @@
+$color-active-background: $color-primary;
+$color-active-text: $color-white;
+$color-inactive-background: $color-secondary;
+$color-inactive-text: $color-active-background;
+
+#controls {}
+
+#controls-sort {
+    margin-bottom: 20px;
+    
+    @include clearfix;
+}
+
+.controls-sort__button--sort {
+    background-color: $color-inactive-background;
+    color: $color-active-background;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 140px;
+    
+    @include box-shadow;
+}
+
+.controls-sort__button--sort:first-child {
+    margin-left: 0;
+}
+
+.controls-sort__button--sort:last-child {
+    margin-right: 0;
+}
+
+.controls-sort__button--sort[data-active="true"] {
+    background-color: $color-active-background;
+    color: $color-active-text;
+}

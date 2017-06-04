@@ -1,0 +1,18 @@
+#controls-filter {
+    margin-bottom: 20px;
+}
+
+.controls--filter__label,
+.controls-filter__select{
+    margin-right: 7px;
+}
+
+.controls-filter__button--remove {
+    color: $color-white;
+    padding: 0 6px;
+}
+
+.controls-filter__button--remove:hover {
+    color: $color-primary;
+    text-decoration: underline;
+}

@@ -1,0 +1,38 @@
+.result-panel__holiday-overview,
+.result-panel__holiday-description {
+    padding: 10px;
+}
+
+.result-panel__holiday-overview {
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 10px;
+    
+    @include clearfix;
+}
+
+.result-panel__holiday-overview-text {
+    float: left;
+    width: 80%;
+}
+
+.result-panel__description-expand {
+    float: right;
+}
+
+.result-panel__holiday-description {
+    background-color: $color-white;
+    color: $color-primary;
+}
+
+.result-panel__book-button {
+    background-color: $color-font-primary;
+    border-radius: 4px;
+    color: $color-white;
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 0;
+    width: 120px;
+    margin: 10px auto 0;
+}

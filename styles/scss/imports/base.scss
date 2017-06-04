@@ -1,0 +1,32 @@
+body {
+    background: #fff url("../../img/background.jpg") no-repeat;
+    font-family: Arial, sans-serif;
+}
+
+p,
+label,
+h1,
+h2,
+h3,
+button {
+    font-family: Arial, sans-seriff;
+}
+
+#main-content {
+    margin: 10px auto 0;
+    width: 460px;
+}
+
+.button {
+    padding: 20px 10px;
+}
+
+.align-center-parent {
+    position: relative;
+}
+
+.align-center-child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
