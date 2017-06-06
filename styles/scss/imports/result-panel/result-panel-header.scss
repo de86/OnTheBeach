@@ -7,6 +7,10 @@ $color-header-info: rgba(255, 255, 255, 0.75);
     @include box-shadow;
 }
 
+.result-panel[data-filtered="true"] {
+    display: none;
+}
+
 .result-panel__header {
     position: absolute;
     width: 100%;

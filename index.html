@@ -9,40 +9,46 @@
         <div id="main-content">
             <div id="controls">
                 <div id="controls-sort">
-                    <button class="button controls-sort__button--sort" id="sortPrice" data-active="true">sort by <strong>price</strong></button>
-                    <button class="button controls-sort__button--sort" id="sortRating">sort by <strong>rating</strong></button>
-                    <button class="button controls-sort__button--sort" id="sortName">sort by <strong>name</strong></button>
+                    <button class="button controls-sort__button-sort" id="sortPrice" data-active="true">sort by <strong>price</strong></button>
+                    <button class="button controls-sort__button-sort" id="sortRating" data-active="false">sort by <strong>rating</strong></button>
+                    <button class="button controls-sort__button-sort" id="sortName" data-active="false">sort by <strong>name</strong></button>
                 </div>
+                
                 <div id="controls-filter">
                     <label class="controls-filter__label">Filter by:</label>
-                    <select class="controls-filter__select" id="filterAirport">
+                    <select class="controls-filter__select" id="filterAirport" data-filter-by="airport">
                         <option value="" selected>Airport</option>
                         <option value="Manchester">Manchester</option>
                         <option value="Liverpool">Liverpool</option>
-                        <option value="East midlands">East midlands</option>
+                        <option value="East Midlands">East Midlands</option>
                     </select>
-                <select class="controls-filter__select" id="filterDate">
-                    <option value="" selected>Date</option>
-                    <option value="27 May 2014">27 May 2014</option>
-                    <option value="3 July 2014">3 July 2014</option>
-                </select>
-                <button class="button controls-filter__button--remove" id="removeFilters">Remove Filters</button>
+                    
+                    <select class="controls-filter__select" id="filterDate" data-filter-by="date">
+                        <option value="" selected>Date</option>
+                        <option value="27 May 2014">27 May 2014</option>
+                        <option value="3 July 2014">3 July 2014</option>
+                    </select>
+                    
+                    <button class="button controls-filter__button--remove" id="removeFilters">Remove Filters</button>
                 </div>
             </div>
 
-            <div data-filtered-by="none" data-sorted-by="price" id="results">
+            <div data-sorted-by="price" id="results">
                 
-                <article class="result-panel">
+                <article class="result-panel" 
+                         data-hotel-name="Costa Adeje Gran Hotel" 
+                         data-price="1136.50"
+                         data-rating="5" 
+                         data-airport="East Midlands" 
+                         data-date="3 July 2014">
                         <header class="result-panel__header">
                             <div class="result-panel__header-info">
-                                <h2 class="result-panel__hotel-name sortable__name">Costa Adeje Gran Hotel</h2>
-                                    <span class="sortable__rating">
-                                        <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
-                                        <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
-                                        <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
-                                        <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
-                                        <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
-                                    </span>
+                                <h2 class="result-panel__hotel-name">Costa Adeje Gran Hotel
+                                    <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
+                                    <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
+                                    <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
+                                    <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
+                                    <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
                                 </h2>
                                 <h3 class="result-panel__location">Costa Adeje, Tenerife</h3>
                             </div>
@@ -51,7 +57,7 @@
                                 <div class="result-panel__price-container align-center-child">
                                     holiday price<br/>
                                     <span class="result-panel__price-text">
-                                        &pound;<span class="sortable__price">1136.50</span>
+                                        &pound;1136.50
                                     </span>
                                 </div>
                             </div>
@@ -77,15 +83,18 @@
 
                 
                 
-                <article class="result-panel">
+                <article class="result-panel" 
+                         data-hotel-name="Laguna Park II" 
+                         data-price="696.80"
+                         data-rating="3" 
+                         data-airport="Liverpool" 
+                         data-date="27 May 2014">
                         <header class="result-panel__header">
                             <div class="result-panel__header-info">
-                                <h2 class="result-panel__hotel-name sortable__name">Laguna Park II
-                                    <span class="sortable__rating">
-                                        <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
-                                        <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
-                                        <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
-                                    </span>
+                                <h2 class="result-panel__hotel-name">Laguna Park II
+                                    <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
+                                    <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
+                                    <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
                                 </h2>
                                 <h3 class="result-panel__location">Costa Adeje, Tenerife</h3>
                             </div>
@@ -94,7 +103,7 @@
                                 <div class="result-panel__price-container align-center-child">
                                     holiday price<br/>
                                     <span class="result-panel__price-text">
-                                        &pound;<span class="sortable sortable__price">696.80</span>
+                                        &pound;696.80
                                     </span>
                                 </div>
                             </div>
@@ -119,16 +128,19 @@
                 </article>
                 
                 
-                <article class="result-panel">
+                <article class="result-panel" 
+                         data-hotel-name="Aguamarina Golf Hotel and Apartments" 
+                         data-price="499.99"
+                         data-rating="4" 
+                         data-airport="Manchester" 
+                         data-date="3 July 2014">
                         <header class="result-panel__header">
                             <div class="result-panel__header-info">
-                                <h2 class="result-panel__hotel-name sortable__name">Aguamarina Golf Hotel and Apartments
-                                    <span class="sortable__rating">
-                                        <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
-                                        <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
-                                        <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
-                                        <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
-                                    </span>
+                                <h2 class="result-panel__hotel-name">Aguamarina Golf Hotel and Apartments
+                                    <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
+                                    <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
+                                    <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
+                                    <img src="img/ratingStar.png" class="result-panel__star-img" alt="" />
                                 </h2>
                                 <h3 class="result-panel__location">Costa Adeje, Tenerife</h3>
                             </div>
@@ -137,14 +149,14 @@
                                 <div class="result-panel__price-container align-center-child">
                                     holiday price<br/>
                                     <span class="result-panel__price-text">
-                                        &pound;<span class="sortable sortable__price">499.99</span>
+                                        &pound;499.99
                                     </span>
                                 </div>
                             </div>
                         </header>
 
 
-                        <img src="img/image_03.png" class="result-panel__thumbnail" alt="">
+                        <img src="img/image_02.png" class="result-panel__thumbnail" alt="">
                         <div class="result-panel__holiday-overview">
                             <div class="result-panel__holiday-overview-text">
                                 <strong>3 July 2014</strong> for <strong>7 days</strong> from Manchester,
@@ -164,6 +176,7 @@
         </div>
         
         <script type="application/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
+        <script type="application/javascript" src="js/resultUtils.js"></script>
         <script type="application/javascript" src="js/main.js"></script>
     </body>
 </html>

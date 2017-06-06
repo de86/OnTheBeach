@@ -444,7 +444,7 @@ button {
     display: table;
     clear: both; }
 
-.controls-sort__button--sort {
+.controls-sort__button-sort {
   background-color: #b2ebf7;
   color: #00aee1;
   float: left;
@@ -453,13 +453,13 @@ button {
   width: 140px;
   box-shadow: 1px 1px 1px 0px rgba(100, 100, 100, 0.3); }
 
-.controls-sort__button--sort:first-child {
+.controls-sort__button-sort:first-child {
   margin-left: 0; }
 
-.controls-sort__button--sort:last-child {
+.controls-sort__button-sort:last-child {
   margin-right: 0; }
 
-.controls-sort__button--sort[data-active="true"] {
+.controls-sort__button-sort[data-active="true"] {
   background-color: #00aee1;
   color: #fff; }
 
@@ -482,6 +482,9 @@ button {
   position: relative;
   margin-bottom: 20px;
   box-shadow: 1px 1px 1px 0px rgba(100, 100, 100, 0.3); }
+
+.result-panel[data-filtered="true"] {
+  display: none; }
 
 .result-panel__header {
   position: absolute;

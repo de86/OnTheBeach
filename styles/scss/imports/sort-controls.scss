@@ -11,7 +11,7 @@ $color-inactive-text: $color-active-background;
     @include clearfix;
 }
 
-.controls-sort__button--sort {
+.controls-sort__button-sort {
     background-color: $color-inactive-background;
     color: $color-active-background;
     float: left;
@@ -22,15 +22,15 @@ $color-inactive-text: $color-active-background;
     @include box-shadow;
 }
 
-.controls-sort__button--sort:first-child {
+.controls-sort__button-sort:first-child {
     margin-left: 0;
 }
 
-.controls-sort__button--sort:last-child {
+.controls-sort__button-sort:last-child {
     margin-right: 0;
 }
 
-.controls-sort__button--sort[data-active="true"] {
+.controls-sort__button-sort[data-active="true"] {
     background-color: $color-active-background;
     color: $color-active-text;
 }
