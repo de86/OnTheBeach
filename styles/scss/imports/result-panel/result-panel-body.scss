@@ -17,12 +17,22 @@
 }
 
 .result-panel__description-expand {
+    display: block;
+    cursor: pointer;
     float: right;
+    margin-top: 4px;
+    transition: transform .2s;
+}
+
+.result-panel__description-expand--expanded {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .result-panel__holiday-description {
     background-color: $color-white;
     color: $color-primary;
+    display: none;
 }
 
 .result-panel__book-button {

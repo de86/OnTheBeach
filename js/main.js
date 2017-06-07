@@ -37,4 +37,11 @@ var results = new resultUtils();
     $("#removeFilters").click(function(){
         $(".controls-filter__select").val("").change();
     });
+    
+    // Expand description boxes
+    $(".result-panel__description-expand").click(function(){
+        var descriptionPanel = $(this).parents(".result-panel").find(".result-panel__holiday-description");
+        $(this).toggleClass("result-panel__description-expand--expanded");
+        descriptionPanel.slideToggle();
+    });
 });
