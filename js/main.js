@@ -12,12 +12,12 @@ var results = new resultUtils();
     
     // Sort functions
     $("#sortPrice").click(function () {
-        results.sortByPrice();
+        results.sortByNumber("price");
     });
     
     
     $("#sortRating").click(function () {
-        results.sortByRating();
+        results.sortByNumber("rating");
     });
     
     
@@ -39,9 +39,10 @@ var results = new resultUtils();
     });
     
     // Expand description boxes
-    $(".result-panel__description-expand").click(function(){
+    $(document).on("click", ".result-panel__description-expand", (function(){
         var descriptionPanel = $(this).parents(".result-panel").find(".result-panel__holiday-description");
+        
         $(this).toggleClass("result-panel__description-expand--expanded");
         descriptionPanel.slideToggle();
-    });
+    }));
 });

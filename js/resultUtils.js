@@ -12,48 +12,25 @@ resultUtils.prototype.getResultSet = function () {
 
 
 // Sort our result set by price then re-render the DOM
-resultUtils.prototype.sortByPrice = function () {
+resultUtils.prototype.sortByNumber = function (sortOption) {
     // If we are already sorted by price then just reverse
     // our results
-    if ($("#results").attr("data-sorted-by") === "price") {
+    if ($("#results").attr("data-sorted-by") === sortOption) {
         this.reverseResults();
     } else {
         var sortedResultSet = this.resultSet.sort(function (x, y) {
             // Get the price from the HTML as a string for the
             // results to be compared
-            var priceA = $(x).attr("data-price");
-            var priceB = $(y).attr("data-price");
+            var valA = $(x).attr("data-" + sortOption);
+            var valB = $(y).attr("data-" + sortOption);
 
             // Parse our strings to ints before we compare and
             // and return the result to the sort function
-            return -( parseInt(priceA) - parseInt(priceB) );
+            return -( parseInt(valA) - parseInt(valB) );
         });
     };
 
-    $("#results").attr("data-sorted-by", "price");
-    this.renderResultsToDom();
-};
-
-
-// Sort our result set by rating then re-render the DOM
-resultUtils.prototype.sortByRating = function () {
-    // If we are already sorted by rating then just reverse
-    // our results
-    if ($("#results").attr("data-sorted-by") === "rating") {
-        this.reverseResults();
-    } else {
-        var sortedResultSet = this.resultSet.sort(function (x, y) {
-            // Get the rating by checking the number of stars in
-            // results to be compared
-            var ratingA = $(x).attr("data-rating");
-            var ratingB = $(y).attr("data-rating");
-
-            // Compare our ratings and return the result to the sort function
-            return -( parseInt(ratingA) - parseInt(ratingB) );
-        });
-    };
-
-    $("#results").attr("data-sorted-by", "rating");
+    $("#results").attr("data-sorted-by", sortOption);
     this.renderResultsToDom();
 };
 
